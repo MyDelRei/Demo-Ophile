@@ -80,6 +80,62 @@ function LoginPage() {
             <Button className="w-full" type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Signing In...' : 'Sign In'}
             </Button>
+
+            <div className="pt-4 border-t border-border/50">
+              <p className="text-xs font-medium text-muted-foreground mb-2 text-center">
+                Quick Demo Logins:
+              </p>
+              <div className="grid grid-cols-2 gap-1.5">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  onClick={() => {
+                    setLoginId('superadmin')
+                    setPassword('superadmin123')
+                  }}
+                >
+                  Super Admin
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  onClick={() => {
+                    setLoginId('orgadmin')
+                    setPassword('admin123')
+                  }}
+                >
+                  Org Admin
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  onClick={() => {
+                    setLoginId('helpdesk')
+                    setPassword('helpdesk123')
+                  }}
+                >
+                  Help Desk
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  onClick={() => {
+                    setLoginId('user')
+                    setPassword('user123')
+                  }}
+                >
+                  Standard User
+                </Button>
+              </div>
+            </div>
           </form>
         </CardContent>
       </Card>
